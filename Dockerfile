@@ -9,4 +9,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -y \
 
 COPY nfs-common /etc/default/nfs-common
 
-RUN update-rc.d /etc/init.d/rpcbind defaults
+RUN update-rc.d rpcbind defaults
