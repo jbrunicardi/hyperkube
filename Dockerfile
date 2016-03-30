@@ -8,3 +8,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -y \
     && DEBIAN_FRONTEND=noninteractive apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY nfs-common /etc/default/nfs-common
+COPY rc.local /etc/rc.local
+RUN chmod a+rx /etc/rc.local
