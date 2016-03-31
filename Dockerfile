@@ -13,4 +13,4 @@ COPY run.sh /run.sh
 
 RUN chmod +x /run.sh
 
-ENTRYPOINT ["/bin/sh", "-c", "/run.sh", "&&"]
+ENTRYPOINT ["/bin/sh", "-c", "/run.sh", ";"]
