@@ -9,4 +9,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -y \
 
 COPY nfs-common /etc/default/nfs-common
 
-ENTRYPOINT ["service", "rpcbind", "start", "&&"]
+COPY run.sh /run.sh
+
+RUN chmod +x /run.sh
+
+ENTRYPOINT ["/bin/sh", "-c", "/run.sh", "&&"]
