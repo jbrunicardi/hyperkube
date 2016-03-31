@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 echo "Waiting for rpcbind to come up..."
 active=$(/usr/sbin/service rpcbind status | grep "rpcbind is running" )
 while [ -z "$active" ]; do
