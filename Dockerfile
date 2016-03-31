@@ -9,4 +9,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -y \
 
 COPY nfs-common /etc/default/nfs-common
 
-ENTRYPOINT ["service", "rpcbind", "start"]
+ENTRYPOINT ["service", "rpcbind", "start", "&&"]
