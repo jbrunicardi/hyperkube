@@ -9,4 +9,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -y \
 
 COPY nfs-common /etc/default/nfs-common
 
+RUN service rpcbind stop
+RUN service rpcbind start
 RUN service rpcbind start
