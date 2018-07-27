@@ -6,7 +6,7 @@ COPY glusterfs-client_3.10.1-1_amd64.deb /tmp/glusterfs-client_3.10.1-1_amd64.de
 
 RUN set -x \
     && apt-get update && \
-    && apt-get install -y liburcu2
+    && apt-get install -y liburcu2 \
     && dpkg -i /tmp/glusterfs-common_3.10.1-1_amd64.deb \
     && dpkg -i /tmp/glusterfs-client_3.10.1-1_amd64.deb \
     && apt-get autoremove --yes \
