@@ -6,7 +6,7 @@ COPY glusterfs-client_3.12.15-1_amd64.deb /tmp/glusterfs-client_3.12.15-1_amd64.
 
 RUN set -x \
     && apt-get update \
-    && apt-get install -y liburcu2 \
+    && apt-get install -y liburcu2 python-prettytable \
     && dpkg -i /tmp/glusterfs-common_3.12.15-1_amd64.deb \
     && dpkg -i /tmp/glusterfs-client_3.12.15-1_amd64.deb \
     && apt-get autoremove --yes \
